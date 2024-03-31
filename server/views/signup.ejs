@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>📑 signup</title>
+  </head>
+  <body>
+    <form action="/signup" method="post">
+      <label for="username">username</label>
+      <input type="text" id="username" name="username" required="required" />
+      <label for="password">password</label>
+      <input
+        type="password"
+        id="password"
+        class="form-control"
+        name="password"
+        required="required"
+      />
+      <button type="submit">create</button>
+    </form>
+    <hr />
+    <% if (status === 400) { %>
+    <p><%= message %></p>
+    <% } %>
+    <p>already a user --> <a href="/">login</a></p>
+  </body>
+</html>
